@@ -1,13 +1,13 @@
 import streamlit as st
 from scorer import score_report # scorer.pyから関数をインポート
 
-st.title('日報鬼採点')
+st.title('日報採点')
 
 report = st.text_area('日報を入力してください', height=300)
 
 if st.button('採点する'):
     if report:
-        with st.spinner('鬼採点中です...'):
+        with st.spinner('採点中です...'):
             score, comment = score_report(report)
         
         st.subheader('採点結果')
